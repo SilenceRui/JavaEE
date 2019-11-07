@@ -1,4 +1,4 @@
-package com.test;
+package com.test.request;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

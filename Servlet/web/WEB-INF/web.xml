@@ -10,7 +10,7 @@
     <!--    配置servlet-->
     <servlet>
         <servlet-name>demo01</servlet-name>
-        <servlet-class>com.test.ServletDemo01</servlet-class>
+        <servlet-class>com.test.request.ServletDemo01</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>demo01</servlet-name>
@@ -19,7 +19,7 @@
     <!--    配置servlet-->
     <servlet>
         <servlet-name>demo02</servlet-name>
-        <servlet-class>com.test.ServletDemo02</servlet-class>
+        <servlet-class>com.test.request.ServletDemo02</servlet-class>
         <!--        服务器启动的时候就执行-->
         <!--        默认第一次访问的时候执行-->
         <load-on-startup>1</load-on-startup>

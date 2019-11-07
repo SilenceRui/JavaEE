@@ -1,4 +1,4 @@
-package com.test;
+package com.test.request;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,17 +12,16 @@ import java.util.Enumeration;
  * @author Silence
  * @creat 2019-10-25  14:21
  */
-@WebServlet("/ServletDemo06")
-public class ServletDemo06 extends HttpServlet {
+@WebServlet("/ServletDemo05")
+public class ServletDemo05 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        获取请求头数据user-agent
-        String agent = req.getHeader("user-agent");
-        if (agent.contains("Chrome")){
-            System.out.println("通过谷歌访问...");
-        }else if (agent.contains("Firefox")){
-            System.out.println("通过火狐访问...");
+//        获取所有请求头
+        Enumeration<String> headerNames = req.getHeaderNames();
+        while (headerNames.hasMoreElements()){
+            String headerName = headerNames.nextElement();
+            String headerValue = req.getHeader(headerName);
+            System.out.println(headerName+"--->"+headerValue);
         }
-
     }
 }
